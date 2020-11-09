@@ -1,3 +1,10 @@
+/*
+** EPITECH PROJECT, 2020
+** my_printf_str.c
+** File description:
+** my printf str in c
+*/
+
 #include <stdarg.h>
 
 void my_putstr(char *str);

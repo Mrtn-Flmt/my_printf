@@ -1,3 +1,10 @@
+/*
+** EPITECH PROJECT, 2020
+** my_printf.c
+** File description:
+** my first printf with c language
+*/
+
 #include <stdarg.h>
 #include <unistd.h>
 #include <stdio.h>
@@ -14,10 +21,10 @@ int find_i(char *tab, char element)
     return (-1);                            // le false
 }
 
-void my_printf(char *src, ...)
+int my_printf(char *src, ...)
 {
+    int count = 0;
     va_list my_list;
-    
     int i = 0;
     int tmp_i;
     char tab_index[5] = {'s','c','d','0'};
@@ -29,7 +36,10 @@ void my_printf(char *src, ...)
             tmp_i = find_i(tab_index, src[i]);
             if (tmp_i != -1)
                 (*tab_function[tmp_i]) (&my_list);
+                count++;
         } else if (src[i] != '%')
             my_putchar(src[i]);
+            count++;
     }
+    return (count);
 }

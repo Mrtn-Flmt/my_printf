@@ -19,4 +19,4 @@ void my_printf_char(va_list *my_list);
 
 void my_printf_nbr(va_list *my_list);
 
-void my_printf(char *src, ...);
+int my_printf(char *src, ...);
