@@ -9,18 +9,18 @@ MY	=	lib/my/
 
 INC = 	-include ./include/my.h
 
-SRC	=	./$(MY)my_printf.c	\
-		./$(MY)my_putchar.c \
-		./$(MY)my_put_nbr.c	\
-		./$(MY)my_putstr.c	\
-		./$(MY)my_printf_char.c	\
-		./$(MY)my_printf_str.c	\
-		./$(MY)my_printf_nbr.c	\
-		./$(MY)my_printf_bin.c
+SRC	=	my_printf.c	\
+		my_putchar.c \
+		my_put_nbr.c	\
+		my_putstr.c	\
+		my_printf_char.c	\
+		my_printf_str.c	\
+		my_printf_nbr.c	\
+		my_printf_bin.c
 
 OBJ = $(SRC:.c=.o)
 
-LIB = -L ./lib -my
+LIB = -L ./lib -lmy
 
 CFLAGS += -Wall -Wextra -g
 

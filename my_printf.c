@@ -8,7 +8,7 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include <stdio.h>
-#include "../../include/my.h"
+#include "./include/my.h"
 
 int find_i(char *tab, char element)
 {
