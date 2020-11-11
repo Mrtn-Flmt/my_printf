@@ -26,16 +26,16 @@ int my_printf(char *src, ...)
     va_list my_list;
     int count = 0;
     int i = 0;
-    int tmp_i;
+    int x;
     char tab_index[5] = {'s','c','d','b','0'};
     void (*tab_function[4]) (va_list *my_list) = {my_printf_str, my_printf_char, my_printf_nbr, my_printf_bin};
     va_start(my_list, src);
 
     for (i = 0; src[i] != '\0'; i++) {
         if (i != 0 && src[i - 1] == '%') {
-            tmp_i = find_i(tab_index, src[i]);
-            if (tmp_i != -1)
-                (*tab_function[tmp_i]) (&my_list);
+            x = find_i(tab_index, src[i]);
+            if (x != -1)
+                (*tab_function[x]) (&my_list);
                 count++;
         } else if (src[i] != '%')
             my_putchar(src[i]);
