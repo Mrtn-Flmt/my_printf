@@ -7,7 +7,7 @@
 
 void my_putchar(char c);
 
-void my_putstr (char const *str)
+void my_putstr (char *str)
 {
     while('\0' != *str){
         my_putchar(*str);

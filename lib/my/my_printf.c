@@ -23,12 +23,12 @@ int find_i(char *tab, char element)
 
 int my_printf(char *src, ...)
 {
-    int count = 0;
     va_list my_list;
+    int count = 0;
     int i = 0;
     int tmp_i;
-    char tab_index[5] = {'s','c','d','0'};
-    void (*tab_function[4]) (va_list *my_list) = {my_printf_str, my_printf_char, my_printf_nbr};
+    char tab_index[5] = {'s','c','d','b','0'};
+    void (*tab_function[4]) (va_list *my_list) = {my_printf_str, my_printf_char, my_printf_nbr, my_printf_bin};
     va_start(my_list, src);
 
     for (i = 0; src[i] != '\0'; i++) {
