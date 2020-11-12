@@ -16,9 +16,9 @@ int find_i(char *tab, char element)
 
     for (i = 0; tab[i] != 0; i++) {
         if (tab[i] == element)
-        return (i);                         // Le true
+        return (i);
     }
-    return (-1);                            // le false
+    return (-1);
 }
 
 int my_printf(char *src, ...)
